@@ -135,13 +135,13 @@ function logout() {
         confirmButtonText: 'Yes'
     }).then((result) => {
         if (result.isConfirmed) {
-            fetch(`${URL}/user/logout`,{
-                method:"POST",
-                headers: {
-                    "Content-type": "application/json;charset=UTF-8",
-                    "authorization": token
-                }
-            })
+            fetch(`${URL}/user/logout`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json;charset=UTF-8",
+                Authorization: `Bearer ${token}`,
+              },
+            });
             
             Swal.fire(
                 'see you soon',
