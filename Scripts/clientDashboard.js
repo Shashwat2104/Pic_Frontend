@@ -116,8 +116,8 @@ async function notification() {
     const req = await fetch(`${URL}/book/notifications`, {
         method:"GET",
         headers: {
-            "Content-type": "application/json",
-            "authorization": token
+            "Content-Type": "application/json",
+           Authorization: `Bearer ${token}`,
         }
     });
     const res = await req.json();    
